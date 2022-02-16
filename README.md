@@ -35,6 +35,7 @@ jobs:
         access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         account_id: ${{ secrets.AWS_ACCOUNT_ID }}
+        kms_id: ${{ secrets.ECR_KMS_ID }}
         repo: docker/repo
         region: ap-northeast-2
         tags: latest,${{ github.sha }}
@@ -47,11 +48,11 @@ jobs:
 If you don't want to use the latest docker image, you can point to any reference in the repo directly.
 
 ```yaml
-  - uses: kciter/aws-ecr-action@master
+  - uses: DeCash-Official/aws-ecr-action@master
   # or
-  - uses: kciter/aws-ecr-action@v3
+  - uses: DeCash-Official/aws-ecr-action@v4.1
   # or
-  - uses: kciter/aws-ecr-action@0589ad88c51a1b08fd910361ca847ee2cb708a30
+  - uses: DeCash-Official/aws-ecr-action@efcb68872329fd92dd7e08c93e538c643f1ad369
 ```
 
 ## License
