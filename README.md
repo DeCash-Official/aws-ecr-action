@@ -9,6 +9,7 @@ This Action allows you to create Docker images and push into a ECR repository.
 | `secret_access_key` | `string` | | Your AWS secret access key |
 | `account_id` | `string` | | Your AWS Account ID |
 | `repo` | `string` | | Name of your ECR repository |
+| `kms_id` | `string` | | KMS ID for ECR repository encryption |
 | `region` | `string` | | Your AWS region |
 | `create_repo` | `boolean` | `false` | Set this to true to create the repository if it does not already exist |
 | `set_repo_policy` | `boolean` | `false` | Set this to true to set a IAM policy on the repository |
