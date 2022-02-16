@@ -13,12 +13,12 @@ jobs:
       - uses: actions/checkout@v2
       -
         name: build and push on ECR
-        uses: ${{ github.repository }}@v4.1
+        uses: DeCash-Official/aws-ecr-action@master
         with:
           access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           account_id: ${{ secrets.AWS_ACCOUNT_ID }}
-          repo: ${github.repository}
+          repo: ${{ github.repository }}
           region: ${{ env.AWS_REGION }}
           tags: latest,${{ github.ref_name }}
           create_repo: true
