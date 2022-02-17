@@ -143,7 +143,7 @@ function docker_build() {
 
     INPUT_EXTRA_BUILD_ARGS="$INPUT_EXTRA_BUILD_ARGS --cache-from=$INPUT_CACHE_FROM"
   fi
-
+  export DOCKER_BUILDKIT=1
   docker build $INPUT_EXTRA_BUILD_ARGS -f $INPUT_DOCKERFILE $docker_tag_args $INPUT_PATH
   echo "== FINISHED DOCKERIZE"
 }
